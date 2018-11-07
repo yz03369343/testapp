@@ -11,12 +11,12 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image
-    default: "mysql"
+    default: "192.168.36.252/x86app/mysql"
     description: "Docker image name"
     type: string
     label: Image Name
   - variable: imageTag
-    default: "5.7.14"
+    default: "latest"
     description: "Docker image tag"
     type: string
     label: Image Tag
