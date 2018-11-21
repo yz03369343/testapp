@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "kingbase.fullname" . }}
+spec:
+  template:
+    metadata:
+      labels:
+        app: {{ template "kingbase.name" . }}
+        release: "{{ .Release.Name }}"
+    spec:
+      containers:
+        - name: kingbase
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
+          ports:
+          - containerPort: 54321
+          volumeMounts:
+          - mountPath: /home/kingbase/data
+            name: data
+      volumes:
+      - name: data
+      
