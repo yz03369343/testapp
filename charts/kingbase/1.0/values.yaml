@@ -1,6 +1,3 @@
-#Default values for v1.0.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
 image:
   repository: 192.168.36.252/lxapp/kingbase
   tag: latest
@@ -9,4 +6,15 @@ image:
 service:
   type: ClusterIP
   port: 54321
+
+persistence:
+  enable: true
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 8Gi
+
+resource:
+  request:
+    memory: 256Mi
+    cpu: 250m
 

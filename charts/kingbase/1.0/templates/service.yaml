@@ -7,6 +7,9 @@ spec:
   ports:
     - port: 54321
       targetPort: 54321
+{{- if .Values.service.nodePort }}
+      nodePort: {{ .Values.service.nodePort }}
+{{- end }}
   selector:
     app: {{ template "kingbase.name" . }}
     release: "{{ .Release.Name }}"
