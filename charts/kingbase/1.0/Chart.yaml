@@ -1,7 +1,7 @@
-appVersion: "1.0"
+appVersion: 1.0.0
 description: kingbase port 54321 ; local root /data
 name: kingbase
-version: 1.0
+version: 1.0.0
 keywords:
 - database
 - kingbase
