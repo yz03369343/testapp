@@ -39,23 +39,23 @@ questions:
     min: 30000
     max: 32767
     label: Service NodePort number
-- variable: persistence.enabled
-  default: "false"
-  description: "Enable persistent volume for Httpd"
-  type: boolean
-  required: true
-  label: Enable Kingbase Persistent Volume
-  show_subquestion_if: true
-  group: "Persistent Volume"
-  subquestions:
-  - variable: persistence.size
-    default: "8Gi"
-    description: "Kingbase Persistent Volume Size"
-    type: string
-    label: Kingbase Volume Size
-    required: true
-  - variable: persistence.storageClass
-    default: ""
-    description: "If undefined or  null, uses the default StorageClass. Defaults to null."
-    type: storageclass
-    label: Storage Class for Kingbase
+#- variable: persistence.enabled
+#  default: "false"
+#  description: "Enable persistent volume for Httpd"
+#  type: boolean
+#  required: true
+#  label: Enable Kingbase Persistent Volume
+#  show_subquestion_if: true
+#  group: "Persistent Volume"
+#  subquestions:
+#  - variable: persistence.size
+#    default: "8Gi"
+#    description: "Kingbase Persistent Volume Size"
+#    type: string
+#    label: Kingbase Volume Size
+#    required: true
+#  - variable: persistence.storageClass
+#    default: ""
+#    description: "If undefined or  null, uses the default StorageClass. Defaults to null."
+#    type: storageclass
+#    label: Storage Class for Kingbase

@@ -15,9 +15,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
           ports:
           - containerPort: 54321
-          volumeMounts:
-          - mountPath: /home/kingbase/data
-            name: data
+#          volumeMounts:
+#          - mountPath: /home/kingbase/data
+#            name: data
 #      volumes:
 #      - name: data
 #      {{- if .Values.persistence.enabled }}

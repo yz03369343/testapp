@@ -7,14 +7,14 @@ service:
   type: ClusterIP
   port: 54321
 
-persistence:
-  enable: true
-  storageClass: ""
-  accessMode: ReadWriteOnce
-  size: 8Gi
+#persistence:
+#  enable: true
+#  storageClass: ""
+#  accessMode: ReadWriteOnce
+#  size: 8Gi
 
-resource:
-  request:
-    memory: 256Mi
-    cpu: 250m
+#resource:
+#  request:
+#    memory: 256Mi
+#    cpu: 250m
 
