@@ -20,35 +20,23 @@ questions:
     type: string
     label: Kingbase Image Tag
 - variable: service.type
-  default: "NodePort"
+  default: "ClusterIP"
+  description: "Kingbase K8s Service type"
+  type: enum
+  options:
+    - "ClusterIP"
+    - "NodePort"
   required: true
-  lable: tomcat service type
+  label: Kingbase Service Type
+  show_subquestion_if: "NodePort"
   group: "Services and Load Balancing"
+  subquestions:
   - variable: service.nodePort
-    default: 31001
+    default: ""
     description: "NodePort port number(to set explicitly, choose port between 30000-32767)"
     type: int
     min: 30000
     max: 32767
     label: Service NodePort number
-#- variable: service.type
-#  default: "ClusterIP"
-#  description: "Kingbase K8s Service type"
-#  type: enum
-#  options:
-#    - "ClusterIP"
-#    - "NodePort"
-#  required: true
-#  label: Kingbase Service Type
-#  show_subquestion_if: "NodePort"
-#  group: "Services and Load Balancing"
-#  subquestions:
-#  - variable: service.nodePort
-#    default: ""
-#    description: "NodePort port number(to set explicitly, choose port between 30000-32767)"
-#    type: int
-#    min: 30000
-#    max: 32767
-#    label: Service NodePort number
 
 
