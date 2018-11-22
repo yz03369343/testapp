@@ -25,7 +25,7 @@ questions:
   lable: tomcat service type
   group: "Services and Load Balancing"
   - variable: service.nodePort
-    default: 30000-32000
+    default: 31001
     description: "NodePort port number(to set explicitly, choose port between 30000-32767)"
     type: int
     min: 30000
