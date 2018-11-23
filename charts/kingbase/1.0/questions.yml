@@ -11,7 +11,7 @@ questions:
   group: "Container Images"
   subquestions:
   - variable: image.repository
-    default: "192.168.36.252/lxapp/kingbase"
+    default: "192.168.36.252/lxapp/kingtest"
     description: "Docker image name"
     type: string
     label: Httpd Image Name
